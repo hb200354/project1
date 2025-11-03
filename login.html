@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">5조 쇼핑몰 클론</a></h1>
+        <nav>
+            <ul>
+                <li><a href="list.html">상품 목록</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>로그인</h2>
+        <form>
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">로그인</button>
+        </form>
+
+        <section class="db-process">
+            <h3>DB 처리 과정 (SQL 예시)</h3>
+            <pre>
+-- 로그인 검증 쿼리
+SELECT * FROM users
+WHERE username = '입력한아이디'
+  AND password = '입력한비밀번호';
+      </pre>
+            <p>쿼리 결과가 있으면 로그인 성공, 없으면 실패로 처리됩니다.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 5조 클론 프로젝트</p>
+    </footer>
+</body>
+
+</html>

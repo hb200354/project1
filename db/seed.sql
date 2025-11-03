@@ -1,0 +1,35 @@
+-- 예시
+-- insert into users (
+--    username,
+--    password,
+--    name,
+--    email
+-- ) values ( 'student1',
+--            '1111',
+--            '김학생',
+--            'student1@example.com' ),( 'dev123',
+--                                       'abcd',
+--                                       '이개발',
+--                                       'dev123@example.com' ),( 'admin',
+--                                                                '0000',
+--                                                                '관리자',
+--                                                                'admin@example.com' );
+
+-- insert into products (
+--    name,
+--    price,
+--    description,
+--    image_url
+-- ) values ( '기본 반팔 티셔츠',
+--            15000,
+--            '편하게 입을 수 있는 기본 반팔 티셔츠입니다.',
+--            'https://via.placeholder.com/300x200?text=T-shirt' ),( '청바지',
+--                                                                   32000,
+--                                                                   '슬림핏 중청바지입니다.',
+--                                                                   'https://via.placeholder.com/300x200?text=Jeans' ),( '블랙 자켓'
+--                                                                   ,
+--                                                                                                                        59000,
+--                                                                                                                        '가을에 입기 좋은 블랙 자켓입니다.'
+--                                                                                                                        ,
+--                                                                                                                        'https://via.placeholder.com/300x200?text=Jacket'
+--                                                                                                                        );

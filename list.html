@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 목록</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">5조 쇼핑몰 클론</a></h1>
+        <nav>
+            <ul>
+                <li><a href="list.html">상품 목록</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>상품 목록 (DB 연동 결과)</h2>
+        <p>아래는 <code>SELECT id, name, price, image_url FROM products;</code> 실행 결과를 표시한 예시입니다.</p>
+
+        <table>
+            <thead>
+                <tr> // 여기 부분 아래로 수정하기
+                    <th>ID</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>이미지</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="detail.html?id=1">기본 반팔 티셔츠</a></td>
+                    <td>15,000원</td>
+                    <td><img src="https://via.placeholder.com/100x80?text=T-shirt" alt="티셔츠"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="detail.html?id=2">청바지</a></td>
+                    <td>32,000원</td>
+                    <td><img src="https://via.placeholder.com/100x80?text=Jeans" alt="청바지"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="detail.html?id=3">블랙 자켓</a></td>
+                    <td>59,000원</td>
+                    <td><img src="https://via.placeholder.com/100x80?text=Jacket" alt="자켓"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 5조 클론 프로젝트</p>
+    </footer>
+</body>
+
+</html>
