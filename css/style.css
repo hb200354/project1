@@ -1,0 +1,105 @@
+/* ===== 헤더 공통 스타일 ===== */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  position: relative;
+}
+
+/* 로고 */
+.logo img {
+  height: 40px;
+}
+
+/* 네비게이션 기본 구조 */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav > ul {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 🔹 dropdown이 위치 기준이 되게 설정 (이게 핵심!) */
+.dropdown {
+  position: relative;
+}
+
+/* 서브메뉴 기본적으로 숨김 */
+.submenu,
+.sub-submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  top: 100%;   /* 부모(li) 바로 아래에 표시됨 */
+  left: 0;
+  min-width: 130px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.sub-submenu {
+  top: 0;       /* 부모(li)와 동일한 높이 */
+  left: 100%;   /* 부모(li) 바로 오른쪽에 표시됨 */
+}
+/* 서브메뉴 항목 스타일 */
+.submenu li,
+.sub-submenu li {
+    padding: 8px 20px;
+    }
+.submenu li:hover,
+.sub-submenu li:hover {
+    background-color: #f5f5f5;
+    }
+/* 호버 시 서브메뉴 표시 */
+.dropdown:hover > .submenu {
+    display: block;
+    }   
+.submenu li.dropdown:hover > .sub-submenu {
+    display: block;
+    left: 100%;
+    top: 0;
+    }
+/* ===== 헤더 우측 아이콘 스타일 ===== */
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+.header-icons a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+}
+.header-icons a:hover {
+  color: #007BFF;
+}
+/* ===== 반응형 헤더 ===== */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav > ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .header-icons {
+    margin-top: 10px;
+  }
+}
+/* ===== 헤더 공통 스타일 끝 ===== */
+    

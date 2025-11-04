@@ -9,15 +9,43 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="index.html">5조 쇼핑몰 클론</a></h1>
-        <nav>
-            <ul>
-                <li><a href="list.html">상품 목록</a></li>
-                <li><a href="login.html">로그인</a></li>
+    <!-- 헤더 (Soopsori 스타일 메뉴바) -->
+    <header class="main-header">
+        <!-- 로고 -->
+        <div class="logo">
+        <a href="list.html">
+            <img src="images/logo.png" alt="Soopsori 로고">
+        </a>
+        </div>
+
+        <!-- 네비게이션 -->
+        <nav class="main-nav">
+        <ul>
+            <li class="dropdown">
+            <a href="#">PRODUCT</a>
+            <ul class="submenu">
+                <li><a href="best.html">베스트</a></li>
+                <li class="dropdown">
+                <a href="furniture.html">소가구</a>
+                <ul class="sub-submenu">
+                    <li><a href="storage.html">수납가구</a></li>
+                    <li><a href="desk-chair.html">책상·의자</a></li>
+                    <li><a href="accessory.html">액세서리</a></li>
+                </ul>
+                </li>
             </ul>
+            </li>
+        </ul>
         </nav>
+
+        <!-- 로그인 아이콘 -->
+        <div class="login-icon">
+        <a href="login.html">
+            <img src="images/log-in.png" alt="로그인 아이콘">
+        </a>
+        </div>
     </header>
+
 
     <main>
         <h2>상품 상세 페이지 (DB 연동)</h2>
