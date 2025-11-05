@@ -1,0 +1,84 @@
+    /* ===== 헤더 (Bootstrap 기본 확장) ===== */
+    .navbar {
+        font-weight: 500;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-left: 0.1rem;
+        display: none;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* ===== 상품 카드 ===== */
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .product-item {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 220px;
+        text-align: center;
+        padding: 1rem;
+        transition: all 0.2s ease;
+        background: #fff;
+    }
+
+    .product-item:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+    }
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        transition: opacity 0.3s ease;
+    }
+
+    .product-item h3 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .product-item .price {
+        color: #555;
+        font-weight: bold;
+    }
+
+    /* hover 시 이미지 교체 */
+    .product-item img.hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .product-item:hover img.hover-img {
+        opacity: 1;
+    }
+
+    /* 카드 이미지 영역을 relative로 */
+    .img-box {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 6px;
+    }
