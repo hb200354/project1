@@ -6,73 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
-    <!-- 헤더 (Soopsori 스타일 메뉴바) -->
-    <header class="main-header">
-        <!-- 로고 -->
-        <div class="logo">
+<!-- 헤더 (Soopsori 스타일 메뉴바) -->
+<header class="main-header">
+    <!-- 로고 -->
+    <div class="logo">
         <a href="list.html">
             <img src="images/logo.png" alt="Soopsori 로고">
         </a>
-        </div>
+    </div>
 
-        <!-- 네비게이션 -->
-        <nav class="main-nav">
+    <!-- 네비게이션 -->
+    <nav class="main-nav">
         <ul>
             <li class="dropdown">
-            <a href="list.html">PRODUCT</a>
-            <ul class="submenu">
-                <li><a href="more-list/best.html">베스트</a></li>
-                <li class="dropdown">
-                <a href="more-list/furniture.html">소가구</a>
-                <ul class="sub-submenu">
-                    <li><a href="more-list/storage.html">수납가구</a></li>
-                    <li><a href="more-list/desk-chair.html">책상·의자</a></li>
-                    <li><a href="more-list/accessory.html">액세서리</a></li>
+                <a href="list.html">PRODUCT</a>
+                <ul class="submenu">
+                    <li><a href="more-list/best.html">베스트</a></li>
+                    <li class="dropdown">
+                        <a href="more-list/furniture.html">소가구</a>
+                        <ul class="sub-submenu">
+                            <li><a href="more-list/storage.html">수납가구</a></li>
+                            <li><a href="more-list/desk-chair.html">책상·의자</a></li>
+                            <li><a href="more-list/accessory.html">액세서리</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
             </li>
         </ul>
-        </nav>
+    </nav>
 
-        <!-- 로그인 아이콘 -->
-        <div class="login-icon">
+    <!-- 로그인 아이콘 -->
+    <div class="login-icon">
         <a href="login.html">
             <img src="images/log-in.png" alt="로그인 아이콘">
         </a>
-        </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <h2>로그인</h2>
-        <form>
+    <!-- 메인 -->
+    <main class="login-container">
+        <h2 class="login-title">로그인</h2>
+
+        <div class="login-tabs">
+            <button id="member-tab" class="active">기존 회원</button>
+            <button id="guest-tab">비회원 주문조회</button>
+        </div>
+
+        <!-- 기존 회원 로그인 폼 -->
+        <form id="member-form" class="login-form">
             <label for="username">아이디</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" placeholder="아이디" required>
 
             <label for="password">비밀번호</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" placeholder="비밀번호" required>
 
-            <button type="submit">로그인</button>
+            <div class="login-options">
+                <label><input type="checkbox" checked> 아이디 저장</label>
+                <div class="links">
+                    <a href="#">회원가입</a> |
+                    <a href="#">아이디 찾기</a> /
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">로그인</button>
         </form>
 
-        <section class="db-process">
-            <h3>DB 처리 과정 (SQL 예시)</h3>
-            <pre>
--- 로그인 검증 쿼리
-SELECT * FROM users
-WHERE username = '입력한아이디'
-  AND password = '입력한비밀번호';
-      </pre>
-            <p>쿼리 결과가 있으면 로그인 성공, 없으면 실패로 처리됩니다.</p>
-        </section>
+        <!-- 비회원 주문조회 폼 -->
+        <form id="guest-form" class="login-form hidden">
+            <label for="order-name">주문자명</label>
+            <input type="text" id="order-name" name="order-name" placeholder="주문자명" required>
+
+            <label for="order-number">주문번호</label>
+            <input type="text" id="order-number" name="order-number" placeholder="주문번호" required>
+
+            <p class="notice">*주문번호를 잊으신 경우, 이메일로 발송된 내역을 확인해주세요.</p>
+
+            <button type="submit" class="login-btn">비회원 주문조회</button>
+        </form>
     </main>
 
     <footer>
         <p>© 2025 5조 클론 프로젝트</p>
     </footer>
+
+    <script>
+        // 탭 전환 기능
+        const memberTab = document.getElementById('member-tab');
+        const guestTab = document.getElementById('guest-tab');
+        const memberForm = document.getElementById('member-form');
+        const guestForm = document.getElementById('guest-form');
+
+        memberTab.addEventListener('click', () => {
+            memberTab.classList.add('active');
+            guestTab.classList.remove('active');
+            memberForm.classList.remove('hidden');
+            guestForm.classList.add('hidden');
+        });
+
+        guestTab.addEventListener('click', () => {
+            guestTab.classList.add('active');
+            memberTab.classList.remove('active');
+            guestForm.classList.remove('hidden');
+            memberForm.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>

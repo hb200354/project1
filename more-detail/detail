@@ -7,196 +7,13 @@
     <title>상품 상세</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  overflow:hidden;
-  font-family:'Noto Sans KR', sans-serif;
-   padding-bottom:80px;
-}
-
-/*  헤더 고정 */
-header{
-  position:fixed;
-  top:0; left:0;
-  width:100%;
-  height:80px;
-  background:white;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 40px;
-  z-index:100;
-  
-}
-
-/* 로고 */
-.logo{ height:32px; }
-
-/*  메뉴 */
-nav ul{ display:flex; list-style:none; }
-nav li{ position:relative; margin:0 20px; }
-nav a{ text-decoration:none; color:#222; font-weight:700; }
-
-/*  하위 메뉴 (hover 시 표시) */
-nav li ul{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:0;
-  background:#fff;
-  border:1px solid #ddd;
-}
-nav li:hover ul{ display:block; }
-nav li ul li{ padding:10px 20px; white-space:nowrap; }
-
-/*  좌/우 분할 */
-.wrap{
-  display:flex;
-  height:calc(100vh - 80px);
-  min-height:0; 
-  /*padding-top:80px; */
-}
-
-/* 왼쪽 (스크롤) */
-.left{
-  flex:3;
-  overflow-y:auto;
-  min-height:0;
-  padding:40px;
-}
-.left .ph{
-  height:400px;
-  background:#eee;
-  margin-bottom:30px;
-  border-radius:25px;
-  aspect-ratio: 16 / 9;   
-  width: 100%;
-  object-fit: cover;
-}
-/* 오른쪽 상품및 (스크롤) */
-.right{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  border-left:1px solid #ffffff;
-  background:#f7f7f7;
-  padding:20px;
-  height:100%;
-  min-width:0;   
-  min-height:0; 
-  border-radius:10px;
-
-}
-.right-scroll{
-  /* 스크롤실험 */
-  flex:1 1 auto;
-  overflow-y:auto;           
-  overflow-x:hidden;
-  min-height:0;
-  max-height:calc(100vh - 80px - 80px);     
-  padding-bottom:120px;
-              
-}
-
-.right-A{
-    display:block;
-    background:#ffffff;
-    color:#000000;
-    font-size:26px;
-      font-weight:700;
-      padding:6px 10px;
-      line-height:1.3;
-      border-radius:4px;
-      margin-bottom:14px;
-      text-align: center;
-      width:100%;
-    }
-
-
-
-
-
-/* 옵션 박스 전체 */
-.option-box {
-    margin-top: 20px;
-    width: 100%;
-    
-}
-
-/* 상단 라벨 */
-.option-label {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-/* 선택 박스 */
-.option-select-area select {
-    width: 90%;
-    padding: 12px 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-    
-}
-
-.option-select-area select:focus {
-    border: 1px solid #007a6f;
-}
-
-
-
-
-/*버튼*/
-.button{
-  position:sticky;  
-  bottom:16px;      
-  background:#002c2c;
-  color:#ffffff;
-  border:0;
-  border-radius:15px;
-  padding:20px 20px;
-  width:100%;
-  display:block;
-  font-weight:700;
-  cursor:pointer;
-  margin-top: 250px;
- font-size:25px;
- 
-  
-}
-
-  footer{
-  position:sticky;
-  bottom:0;
-  width:100%;
-  height:80px;
-  background:#002c2c;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  padding-left:40px;
-  font-size:14px;
-}
-
-
-
-</style>
-
 <body>
     <!-- 헤더 (Soopsori 스타일 메뉴바) -->
     <header class="main-header">
         <!-- 로고 -->
         <div class="logo">
-            <a href="list.html">
-                <img src="images/logo.png" alt="Soopsori 로고">
+            <a href="../list.html">
+                <img src="../images/logo.png" alt="Soopsori 로고">
             </a>
         </div>
 
@@ -204,15 +21,15 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
         <nav class="main-nav">
             <ul>
                 <li class="dropdown">
-                    <a href="list.html">PRODUCT</a>
+                    <a href="../list.html">PRODUCT</a>
                     <ul class="submenu">
-                        <li><a href="more-list/best.html">베스트</a></li>
+                        <li><a href="../more-list/best.html">베스트</a></li>
                         <li class="dropdown">
-                            <a href="more-list/furniture.html">소가구</a>
+                            <a href="../more-list/furniture.html">소가구</a>
                             <ul class="sub-submenu">
-                                <li><a href="more-list/storage.html">수납가구</a></li>
-                                <li><a href="more-list/desk-chair.html">책상·의자</a></li>
-                                <li><a href="more-list/accessory.html">액세서리</a></li>
+                                <li><a href="../more-list/storage.html">수납가구</a></li>
+                                <li><a href="../more-list/desk-chair.html">책상·의자</a></li>
+                                <li><a href="../more-list/accessory.html">액세서리</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -224,8 +41,8 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
 
         <!-- 로그인 아이콘 -->
         <div class="login-icon">
-            <a href="login.html">
-                <img src="images/log-in.png" alt="로그인 아이콘">
+            <a href="../login.html">
+                <img src="../images/log-in.png" alt="로그인 아이콘">
             </a>
         </div>
     </header>
@@ -245,27 +62,27 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
    <div class="wrap">
   <section class="left">
    
-    <img class="ph" src="images/1.jpg" alt="첫장">
+    <img class="ph" src="../images/1.jpg" alt="첫장">
   
 
     
-    <img class="ph" src="images/2.jpg" alt="두번쨰장">
+    <img class="ph" src="../images/2.jpg" alt="두번쨰장">
   
 
     
-    <img class="ph" src="images/패밀리.png" alt="패밀리">
+    <img class="ph" src="../images/패밀리.png" alt="패밀리">
  
 
     
-    <img class="ph" src="images/패밀리.png" alt="패밀리">
+    <img class="ph" src="../images/패밀리.png" alt="패밀리">
   
 
     
-    <img class="ph" src="images/패밀리.png" alt="패밀리">
+    <img class="ph" src="../images/패밀리.png" alt="패밀리">
   
 
     
-    <img class="ph" src="images/패밀리.png" alt="패밀리">
+    <img class="ph" src="../images/패밀리.png" alt="패밀리">
   
   </section>
 

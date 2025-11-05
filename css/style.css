@@ -167,7 +167,7 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
 .right{
   flex:1;
   border-left:1px solid #ddd;
-  overflow-y:auto;
+  overflow-y:scroll;
   padding:30px;
   background:#fafafa;
 }
