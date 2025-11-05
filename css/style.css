@@ -102,3 +102,88 @@
   }
 }
 /* ===== 헤더 공통 스타일 끝 ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  overflow:hidden;
+  font-family:'Noto Sans KR', sans-serif;
+}
+
+/* ✅ 헤더 고정 */
+header{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  height:80px;
+  background:white;
+  border-bottom:1px solid #ddd;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  z-index:100;
+}
+
+/* 로고 */
+.logo{ height:32px; }
+
+/* ✅ 메뉴 */
+nav ul{ display:flex; list-style:none; }
+nav li{ position:relative; margin:0 20px; }
+nav a{ text-decoration:none; color:#222; font-weight:700; }
+
+/*  하위 메뉴 (hover 시 표시) */
+nav li ul{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+  border:1px solid #ddd;
+}
+nav li:hover ul{ display:block; }
+nav li ul li{ padding:10px 20px; white-space:nowrap; }
+
+/*  좌/우 분할 */
+.wrap{
+  display:flex;
+  height:100vh;
+  padding-top:80px; /* 헤더 공간 */
+}
+
+/* 왼쪽 (스크롤) */
+.left{
+  flex:3;
+  overflow-y:auto;
+  padding:40px;
+}
+.left .ph{
+  height:400px;
+  background:#eee;
+  margin-bottom:30px;
+  border-radius:8px;
+}
+
+/* 오른쪽 (스크롤) */
+.right{
+  flex:1;
+  border-left:1px solid #ddd;
+  overflow-y:auto;
+  padding:30px;
+  background:#fafafa;
+}
+
+/*  footer */
+footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:80px;
+  background:#002c2c;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  padding-left:40px;
+  font-size:14px;
+}
+
+

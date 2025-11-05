@@ -420,8 +420,8 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
                 
             },
     
-    
         }
+    
 
         // 3️⃣ 해당 상품 데이터 불러오기
         const product = products[id];
