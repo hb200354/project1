@@ -32,31 +32,32 @@ body {
 /* 네비게이션 기본 구조 */
 .main-nav > ul {
     display: flex;
-    list-style: none;  /* 🔹 리스트 아이콘 제거 */
+    list-style: none;  /* 리스트 아이콘 제거 */
     gap: 30px;
     margin: 0;
     padding: 0;
 }
 
 .main-nav li {
-    position: relative;
+    position: center;
+    list-style: none;
     margin: 0;  /* 필요 시 개별 margin 적용 가능 */
 }
 
 .main-nav a {
     text-decoration: none;
-    color: #333;
+    color: #7e7e7e;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-    color: #007BFF;
+    color: #000000;
 }
 
 /* Active 상태 */
 .main-nav a.active {
-  color: #007BFF;
+  color: #000000;
 }
 
 /* 드롭다운 */
@@ -113,6 +114,15 @@ body {
 main {
   padding: 40px 60px;
   text-align: center;
+}
+
+/* ===== 배너 섹션 ===== */
+.banner img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
 /* ===== 푸터 ===== */
