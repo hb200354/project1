@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 헤더 (Soopsori 스타일 메뉴바) -->
+    <!-- 헤더 -->
     <header class="main-header">
         <!-- 로고 -->
         <div class="logo">
@@ -74,15 +74,7 @@
  
 
     
-    <img class="ph" src="../images/패밀리.png" alt="패밀리">
-  
-
     
-    <img class="ph" src="../images/패밀리.png" alt="패밀리">
-  
-
-    
-    <img class="ph" src="../images/패밀리.png" alt="패밀리">
   
   </section>
 
@@ -92,7 +84,7 @@
 
 <aside class="right">
     <div class="right-scroll">
-      <span class="right-A">아루니 범퍼침대 SS 4면형</span>
+      <span class="right-A">포미오 가드침대 스윙도어형+범퍼 SET</span>
         <hr>
 
 <div class="option-box">

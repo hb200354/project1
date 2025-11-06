@@ -191,7 +191,7 @@ nav li ul li{ padding:10px 20px; white-space:nowrap; }
 </style>
 
 <body>
-    <!-- 헤더 (Soopsori 스타일 메뉴바) -->
+    <!-- 헤더 -->
     <header class="main-header">
         <!-- 로고 -->
         <div class="logo">

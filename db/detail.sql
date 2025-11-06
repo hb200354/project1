@@ -7,6 +7,13 @@ CREATE TABLE product_detail_spec (
 
 
 
+
+INSERT INTO product_detail_spec (name, wood_frame, wood_panel, suggestion)
+VALUES ('포미오 가드침대 스윙도어형+범퍼 SET', '박스 프레임', '깔판', 12);
+
+INSERT INTO product_detail_spec (name, wood_frame, wood_panel, suggestion)
+VALUES ('포미오 가드 침대 스윙도어형', '박스 프레임', '깔판', 12);
+
 INSERT INTO product_detail_spec (name, wood_frame, wood_panel, suggestion)
 VALUES ('아루니 범퍼침대 SS 4면형', '박스 프레임', '깔판', 12);
 
