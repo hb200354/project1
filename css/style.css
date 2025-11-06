@@ -106,13 +106,12 @@ body {
 
 /* ===== 로그인 아이콘 ===== */
 .login-icon img {
-  height: 26px;
+  height: 50px;
   vertical-align: middle;
 }
 
 /* ===== 메인 ===== */
 main {
-  padding: 40px 60px;
   text-align: center;
 }
 

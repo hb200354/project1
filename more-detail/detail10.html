@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 | Soopsori</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <!-- 공통 헤더 -->
+    <header class="main-header">
+        <div class="logo">
+        <a href="../best.html"><img src="../images/logo.png" alt="Soopsori 로고"></a>
+        </div>
+
+        <nav class="main-nav">
+        <ul>
+            <li class="dropdown">
+            <a href="../best.html">PRODUCT</a>
+            <ul class="submenu">
+                <li><a href="../best.html">베스트</a></li>
+                <li class="dropdown">
+                <a href="../more-list/furniture.html" class="active">소가구</a>
+                <ul class="sub-submenu">
+                    <li><a href="../more-list/storage.html">수납가구</a></li>
+                    <li><a href="../more-list/deskchair.html" class="active">책상·의자</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </nav>
+
+        <div class="login-icon">
+        <a href="../login.html"><img src="../images/log-in.png" alt="로그인 아이콘"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <!-- 왼쪽: 상품 이미지 + 상세표 -->
+            <section class="left">
+                <div class="img-box">
+                    <img id="mainImg" src="../images/소가구어린이책상.jpg" alt="상품 이미지">
+                </div>
+                <br><br><br><br>
+                <!-- 상세 정보 표 -->
+                <h2>상품 상세 설명</h2><br>
+                <table class="product-detail-table">
+                    <tr>
+                        <th>상품명</th>
+                        <td id="detailName">마론 어린이 책상</td>
+                    </tr>
+                    <tr>
+                        <th>카테고리</th>
+                        <td id="detailCategory">책상·의자</td>
+                    </tr>
+                    <tr>
+                        <th>사용원목</th>
+                        <td id="detailPrice">너도밤나무(비치우드)</td>
+                        
+                    </tr>
+                    <tr>
+                        <th>상품구성</th>
+                        <td id="detailStock">책상</td>
+                    </tr>
+                    <tr>
+                        <th>추천연령</th>
+                        <td id="detailDesc">36개월 이상</td>
+                    </tr>
+                </table><br><br>
+            </section>
+
+            <!-- 오른쪽: 상품 이름, 가격, 옵션, 구매 버튼 -->
+            <section class="right">
+                <div class="right-scroll">
+                    <h2 id="rightName">마론 어린이 책상</h2><br><br>
+                    <p class="price" id="rightPrice">410,000원</p><br>
+                    <hr><br><br>
+                    <h3>배송일정</h3>
+                    <p>배송예정 [11월4주~12월1주]</p><br><br>
+                    <hr><br><br>
+                    <h3>배송 안내</h3>
+                    <p>★45,000원, 설치배송★</p><br><br>
+                    <hr><br><br>
+                    <div class="option-box">
+                        <div class="option-label">[필수] 선택</div><br>
+                        <div class="option-select-area">
+                            <select id="swingSelect" required>
+                                <option value="">=  [필수] 선택  =</option>
+                                <option value="L">스윙도어 L</option>
+                                <option value="R">스윙도어 R</option>
+                            </select>
+                        </div><br>
+                    </div>
+                    <br><br>
+                    <div class="price-box">
+                        <p class="product-price" id="productPrice" data-price="410000"></p>                 </p>
+
+                        <div class="qty-box">
+                            <label for="qty">수량</label>
+                            <input type="number" id="qty" value="1" min="1">
+                        </div>
+
+                        <p class="total-price" id="totalPrice">총 가격: 410,000원</p>
+                    </div><br><br>
+
+                    <button type="button" id="Buybtn" class="button">구매하기</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+<script>
+    const qtyInput = document.getElementById("qty");
+    const priceTag = document.getElementById("productPrice");
+    const totalPriceTag = document.getElementById("totalPrice");
+
+    const price = parseInt(priceTag.dataset.price); 
+
+    function updateTotal() {
+        const qty = parseInt(qtyInput.value);
+        const total = price * qty;
+
+        totalPriceTag.textContent = "총 가격: " + total.toLocaleString() + "원";
+    }
+
+    // 입력할 때마다 자동 계산
+    qtyInput.addEventListener("input", updateTotal);
+
+    // 페이지 로드 시 초기값 반영
+    updateTotal();
+</script>
+
+
+</html>
