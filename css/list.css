@@ -1,4 +1,4 @@
-/* 상품 목록 스타일 */
+/* ===== 상품 카드 ===== */
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
 .product-item {
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 200px;
+  width: 220px;
   text-align: center;
   padding: 1rem;
   transition: all 0.2s ease;
@@ -18,12 +18,13 @@
 }
 
 .product-item:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
 }
 
 .product-item img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 6px;
 }
 
@@ -36,3 +37,23 @@
   color: #555;
   font-weight: bold;
 }
+
+.img-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-box img.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-box:hover img.hover-img {
+  opacity: 1;
+}
+
