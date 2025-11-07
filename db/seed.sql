@@ -12,7 +12,7 @@ insert into products (
      'best'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -26,7 +26,7 @@ insert into products1 (
      'best'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -40,7 +40,7 @@ insert into products1 (
      'best'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -54,7 +54,7 @@ insert into products1 (
      'best'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -68,7 +68,7 @@ insert into products1 (
      'storage'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -82,7 +82,7 @@ insert into products1 (
      'storage'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -96,7 +96,7 @@ insert into products1 (
      'desk_chair'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -110,7 +110,7 @@ insert into products1 (
      'desk_chair'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
@@ -124,7 +124,7 @@ insert into products1 (
      'desk_chair'
    );
 
-insert into products1 (
+insert into products (
    name,
    price,
    image_url,
